@@ -9,6 +9,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "BASE_URL", "\"https://dev-mobile-coco.herokuapp.com/\""
+        buildConfigField "String", "CLIENT_KEY", "\"VT-client-yrHf-c8Sxr-ck8tx\""
     }
     buildTypes {
         release {

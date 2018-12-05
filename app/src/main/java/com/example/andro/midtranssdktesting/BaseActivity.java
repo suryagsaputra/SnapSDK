@@ -2,6 +2,7 @@ package com.example.andro.midtranssdktesting;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
 import com.midtrans.sdk.corekit.callback.CheckoutCallback;
 import com.midtrans.sdk.corekit.callback.TransactionCallback;
 import com.midtrans.sdk.corekit.callback.TransactionOptionsCallback;
@@ -11,6 +12,7 @@ import com.midtrans.sdk.corekit.core.TransactionRequest;
 import com.midtrans.sdk.corekit.models.snap.EnabledPayment;
 import com.midtrans.sdk.corekit.models.snap.Token;
 import com.midtrans.sdk.corekit.models.snap.Transaction;
+
 import java.util.List;
 import java.util.UUID;
 
@@ -36,7 +38,7 @@ public class BaseActivity extends AppCompatActivity {
 
     void initSDKMidtrans() {
         SdkCoreFlowBuilder
-            .init(this, Const.MERCHANT_CLIENT_KEY_SANDBOX, Const.MERCHANT_BASE_URL_SANDBOX)
+                .init(this, BuildConfig.CLIENT_KEY, BuildConfig.BASE_URL)
             .enableLog(true)
             .buildSDK();
     }
